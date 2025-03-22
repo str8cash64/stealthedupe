@@ -1,8 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StealthDupe
+
+StealthDupe is a web application that helps users find affordable alternatives (dupes) to popular beauty products. Users can input a beauty product link, upload an image, or describe a product, and the AI will return dupe recommendations based on price and similarity.
+
+## Features
+
+- Clean, responsive chat UI
+- Three input options: paste a link, upload an image, or text input
+- AI processes input and returns alternative (dupe) recommendations
+- Display results in a card format with product image, name, and price
+- Typing animation effect for AI responses
+
+## Tech Stack
+
+- **Frontend**: Next.js (with App Router), TailwindCSS, React
+- **Backend**: API routes in Next.js (temporary mock API)
+- **Future Integrations**: n8n for workflow automation, third-party APIs for product data
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,15 +36,32 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/page.tsx`: Main page component
+- `src/app/components/`: React components
+  - `ChatContainer.tsx`: Main container for the chat interface
+  - `ChatMessage.tsx`: Component for individual messages
+  - `ChatInput.tsx`: Component for user input (text, link, image upload)
+  - `ProductCard.tsx`: Component for displaying dupe recommendations
+- `src/app/api/dupes/`: API routes for dupe recommendations
+- `src/app/types.ts`: TypeScript type definitions
+
+## Future Enhancements
+
+- Integration with real product databases
+- User authentication and saved favorites
+- Price tracking and notifications
+- More sophisticated product matching algorithms
+- Mobile app version
+
+## License
+
+This project is licensed under the MIT License.
 
 ## Learn More
 
